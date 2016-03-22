@@ -2,30 +2,9 @@
 将对象按着其某个NSString类型的属性排序
 
 
-//RJTestModel.h
-
-#import <Foundation/Foundation.h>
-
-@interface People : NSObject
-  @property (nonatomic, copy) NSString *name;
-  -(instancetype)initWithAddress:(NSString *) name;
-@end
 
 
-
-
-@interface RJTestModel : NSObject
-  @property (nonatomic, copy) NSString *department;
-  @property (nonatomic, copy) People *people;
-  -(instancetype)initWithDepartment:(NSString *) department name:(NSString *) name;
-@end
-
-
-
-
-
-
-//测试／例子代码
+//测试\例子代码
 NSArray *arr = [NSArray arrayWithObjects:[[RJTestModel alloc] initWithDepartment:@"公安局" name:@"王小华"],
                                               [[RJTestModel alloc] initWithDepartment:@"卫生局" name:@"孙小华"],
                                                [[RJTestModel alloc] initWithDepartment:@"法院" name:@"文大华"],
@@ -35,6 +14,8 @@ NSArray *arr = [NSArray arrayWithObjects:[[RJTestModel alloc] initWithDepartment
                                                    [[RJTestModel alloc] initWithDepartment:@"电力局" name:@"侯大华"],
                                                     [[RJTestModel alloc] initWithDepartment:@"电力局" name:@"侯二华"],
                                                      [[RJTestModel alloc] initWithDepartment:@"电力局" name:@"王二华"], nil];
+    
+    
     
     
     ChineseAlphabetSorter *cas = [ChineseAlphabetSorter sharedInstance];
