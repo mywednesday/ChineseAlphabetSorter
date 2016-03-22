@@ -3,19 +3,23 @@
 
 
 //RJTestModel.h
+
+#import <Foundation/Foundation.h>
+
 @interface People : NSObject
-@property (nonatomic, copy) NSString *name;
--(instancetype)initWithAddress:(NSString *) name;
+  @property (nonatomic, copy) NSString *name;
+  -(instancetype)initWithAddress:(NSString *) name;
 @end
 
 
 
 
 @interface RJTestModel : NSObject
-@property (nonatomic, copy) NSString *department;
-@property (nonatomic, copy) People *people;
--(instancetype)initWithDepartment:(NSString *) department name:(NSString *) name;
+  @property (nonatomic, copy) NSString *department;
+  @property (nonatomic, copy) People *people;
+  -(instancetype)initWithDepartment:(NSString *) department name:(NSString *) name;
 @end
+
 
 
 
